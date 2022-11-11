@@ -20,8 +20,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: npm install, build, and test
-      run: |
-        npm init
+      run: 
         npm install mocha -g
         npm install @slack/rtm-api
         mocha index.spec.js
