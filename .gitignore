@@ -94,4 +94,4 @@ token
 .husky/
 .vscode/
 node_modules/
-.eslintrc.js
+test_index.js
