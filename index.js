@@ -29,7 +29,9 @@ rtm.on('message', (message) => {
       } else {
         switch (text) {
           case 'hi':
-            greeting(rtm, channel);
+            for (i = 0; i < 100; i++) {
+              greeting(rtm, channel);
+            }
             break;
           case '테스트 채널에서 떠들지 마세요.':
             break;
