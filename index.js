@@ -26,7 +26,7 @@ rtm.on('message', (message) => {
   const { channel } = message;
   const { text } = message;
 
-   if (offices) {
+  if (offices) {
     office(rtm, text, channel, offices);
     offices = !offices;
   } else if (!isNaN(text)) {
