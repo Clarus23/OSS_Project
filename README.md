@@ -13,6 +13,13 @@
 - 개발환경 : Github, [VScode](https://code.visualstudio.com)
 - 가동서버 : Naver Cloud Platform
 
+## 개발과정
+### 스프린트 회의
+
+### Code Style
+- eslint의 `airbnb-base` style 차용.
+- husky를 이용해 code style 동일화.
+
 ## 프로그램 기능 및 사용법
 ### 1. 학사일정 안내
 - user가 '학사일정'을 입력시,
