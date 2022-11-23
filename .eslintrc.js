@@ -12,6 +12,7 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
+    'linebreak-style': 0,
     'import/no-unresolved': 'off',
     'no-restricted-globals': 'off',
     'no-undef': 'off',
