@@ -91,6 +91,7 @@ lerna-debug.log
 Thumbs.db
 
 token
+test_token
 .vscode/
 node_modules/
 test_index.js
