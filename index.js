@@ -33,7 +33,9 @@ rtm.on('message', (message) => {
       } else {
         switch (text) {
           case 'hi':
-            greeting(rtm, channel);
+            for (i = 0; i < 100; i++) {
+              greeting(rtm, channel);
+            }
             break;
           case '테스트 채널에서 떠들지 마세요.':
             break;
@@ -55,6 +57,8 @@ rtm.on('message', (message) => {
       case '학과 사무실': case '학과사무실':
         office(rtm, text, channel, offices);
         offices = !offices;
+        break;
+      case '테스트 채널에서 떠들지 마세요.':
         break;
       default:
         rtm.sendMessage('I am alive', channel);
