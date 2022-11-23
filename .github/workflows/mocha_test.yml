@@ -24,5 +24,6 @@ jobs:
         npm install mocha -g
         npm install
         mocha index.spec.js
+        mocha haksa.spec.js
       env:
         CI: true
