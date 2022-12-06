@@ -24,5 +24,6 @@ jobs:
         npm install mocha -g
         npm install
         mocha index.spec.js
+        mocha office.spec.js
       env:
         CI: true

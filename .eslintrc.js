@@ -19,6 +19,5 @@ module.exports = {
     'no-return-assign': 'off',
     'no-unused-vars': 'off',
     'no-plusplus': 'off',
-    'linebreak-style': 0,
   },
 };
