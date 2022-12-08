@@ -54,7 +54,6 @@ rtm.on('message', (message) => {
           case '학과 사무실': case '학과사무실': case '과사':
             office(rtm, text, channel, offices);
             offices = !offices;
-            break;
           case '오늘 밥 뭐야' :
             menu(rtm, channel);
             break;
@@ -89,7 +88,7 @@ rtm.on('message', (message) => {
         office(rtm, text, channel, offices);
         offices = !offices;
         break;
-      case '오늘 밥 뭐야' :
+      case '오늘 밥 뭐야':
         menu(rtm, channel);
         break;
       case '이번주 뭐나와' :
