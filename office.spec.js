@@ -26,9 +26,9 @@ const office = require('./office');
 let res;
 
 describe('테스트를 시작합니다.', async () => {
-  before(async () => res = await office(rtm, '과사', channel, false));
+  before(async () => res = await office(rtm, text, channel, offices));
 
-  it('학과사무소 모듈 테스트', (done) => {
+  it('학과사무실 모듈 테스트', (done) => {
     console.log(res);
     assert.equal(res, 'success');
     done();
