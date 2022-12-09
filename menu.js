@@ -17,7 +17,7 @@ async function webScraping(url, selector) {
 
 const today = dt.getDay() + 2;
 const url = 'https://sobi.chonbuk.ac.kr/menu/week_menu.php';
-const selector = `#contents > div.contentsArea.WeekMenu > div:nth-child(247) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(${today}) > ul > li:nth-last-child(-n + 4)`;
+const selector = `#contents > div.contentsArea.WeekMenu > div:nth-child(253) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(${today}) > ul > li:nth-last-child(-n + 4)`;
 let mealscore = 2;
 
 const menu = async function (rtm, channel) {
@@ -27,7 +27,7 @@ const menu = async function (rtm, channel) {
       const str = res.join(',');
       rtm.sendMessage(str, channel);
       for (let i = 0; i < res.length; i++) {
-        if (res[i].match('가지') || res[i].match('땅콩') || res[i].match('메추리알')) {
+        if (res[i].match('가지') || res[i].match('콩') || res[i].match('메추리알') || res[i].match('버섯') || res[i].match('무침')) {
           mealscore -= 1;
         } else if (res[i].match('고기') || res[i].match('오리') || res[i].match('닭') || res[i].match('돈') || res[i].match('치킨')) {
           mealscore += 1;
