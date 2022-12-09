@@ -19,5 +19,7 @@ module.exports = {
     'no-return-assign': 'off',
     'no-unused-vars': 'off',
     'no-plusplus': 'off',
+    'no-restricted-syntax': 'off',
+    'no-fallthrough': 'off',
   },
 };
