@@ -17,12 +17,12 @@ const url = 'https://sobi.chonbuk.ac.kr/menu/week_menu.php';
 const days = ['월', '화', '수', '목', '금'];
 
 const menus = async function (rtm, channel) {
-  let selector = `#contents > div.contentsArea.WeekMenu > div:nth-child(247) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(n + 3) > ul > li:nth-last-child(-n + 4)`;
+  const selector = '#contents > div.contentsArea.WeekMenu > div:nth-child(253) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(n + 3) > ul > li:nth-last-child(-n + 4)';
   webScraping(url, selector).then((res) => {
     console.log(res);
     for (let i = 0; i < 5; i++) {
-      let res2 = res.slice(i * 4, (i + 1) * 4)
-      const str = `${days[i]}요일 식단 : ` + res2.join(',');
+      const res2 = res.slice(i * 4, (i + 1) * 4);
+      const str = `${days[i]}요일 식단 : ${res2.join(',')}`;
       rtm.sendMessage(str, channel);
       let mealscore = 2;
       for (let j = 0; j < res2.length; j++) {
