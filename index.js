@@ -21,6 +21,7 @@ const square = require('./square');
 const office = require('./office');
 const haksa = require('./haksa');
 const menu = require('./menu');
+const menus = require('./menus');
 
 let offices = false;
 let haksaQ = false;
@@ -53,8 +54,11 @@ rtm.on('message', (message) => {
           case '학과 사무실': case '학과사무실': case '과사':
             office(rtm, text, channel, offices);
             offices = !offices;
-          case '오늘 밥 뭐야':
+          case '오늘 밥 뭐야' :
             menu(rtm, channel);
+            break;
+          case '이번주 뭐나와' :
+            menus(rtm, channel);
             break;
           case '테스트 채널에서 떠들지 마세요.':
             break;
@@ -86,6 +90,9 @@ rtm.on('message', (message) => {
         break;
       case '오늘 밥 뭐야':
         menu(rtm, channel);
+        break;
+      case '이번주 뭐나와' :
+        menus(rtm, channel);
         break;
       default:
         rtm.sendMessage('I am alive', channel);
