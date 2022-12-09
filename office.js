@@ -17,8 +17,6 @@ const office = function (rtm, text, channel, offices) {
         }
       }
       if (suc !== 1) {
-        rtm.sendMessage(`${text}을(를) 찾을 수 없습니다.`, channel);
-
         const distance = [];
         let min = 0;
 
