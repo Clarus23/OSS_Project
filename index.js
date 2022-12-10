@@ -54,10 +54,11 @@ rtm.on('message', (message) => {
           case '학과 사무실': case '학과사무실': case '과사':
             office(rtm, text, channel, offices);
             offices = !offices;
-          case '오늘 밥 뭐야' :
+            break;
+          case '오늘 밥 뭐야' : case '오늘 뭐나와': case '오늘 밥뭐야': case '오늘밥뭐야':
             menu(rtm, channel);
             break;
-          case '이번주 뭐나와' :
+            case '이번주 뭐나와' : case '이번주 뭐 나와' : case '이번주 밥뭐야' : case '이번주밥뭐야' :
             menus(rtm, channel);
             break;
           case '테스트 채널에서 떠들지 마세요.':
@@ -88,10 +89,10 @@ rtm.on('message', (message) => {
         office(rtm, text, channel, offices);
         offices = !offices;
         break;
-      case '오늘 밥 뭐야':
+      case '오늘 밥 뭐야' : case '오늘 뭐나와': case '오늘 밥뭐야': case '오늘밥뭐야':
         menu(rtm, channel);
         break;
-      case '이번주 뭐나와' :
+      case '이번주 뭐나와' : case '이번주 뭐 나와' : case '이번주 밥뭐야' : case '이번주밥뭐야' :
         menus(rtm, channel);
         break;
       default:
