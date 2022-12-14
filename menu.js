@@ -9,7 +9,7 @@ async function webScraping(url, selector) {
   const $ = cheerio.load(html.data);
 
   for (const v of $(selector)) {
-    res.push($(v).text());
+    res.push($(v).text().replace('\n', ''));
   }
 
   return res;
@@ -23,11 +23,11 @@ let mealscore = 2;
 const menu = async function (rtm, channel) {
   if (today !== 2 && today !== 8) {
     webScraping(url, selector).then((res) => {
-      console.log(res);
-      const str = res.join(',');
+      let str = res.join(',');
+      console.log(str);
       rtm.sendMessage(str, channel);
       for (let i = 0; i < res.length; i++) {
-        if (res[i].match('가지') || res[i].match('땅콩') || res[i].match('메추리알')) {
+        if (res[i].match('가지') || res[i].match('콩') || res[i].match('메추리알') || res[i].match('나물') || res[i].match('무침') || res[i].match('동태')) {
           mealscore -= 1;
         } else if (res[i].match('고기') || res[i].match('오리') || res[i].match('닭') || res[i].match('돈') || res[i].match('치킨')) {
           mealscore += 1;
